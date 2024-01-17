@@ -1,0 +1,5 @@
+bytes=int(input("Enter the amount of bytes."))
+megabytes=bytes/1024**2
+gigabytes=bytes/1024**3
+print(f"{bytes} bytes are equal to {megabytes:.2f}megabytes and {gigabytes:.2f}gigabytes:")
+
