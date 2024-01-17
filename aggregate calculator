@@ -1,0 +1,9 @@
+matric=int(input("Enter your matric marks."))
+firstyear=int(input("Enter your first year marks."))
+ecat=int(input("Enter your ecat marks."))
+matricmarks=(matric/1100)*0.17
+intermarks=(firstyear/505)*0.5
+ecatmarks=(ecat/400)*0.33
+sum=matricmarks+intermarks+ecatmarks
+aggregate=sum*100
+print(f"Your aggregate is {aggregate:.2f}percent.")
