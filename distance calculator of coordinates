@@ -12,4 +12,4 @@ y_1=int(y1)
 y_2=int(y2)
 import math
 d=math.sqrt((x_2-x_1)**2+(y_2-y_1)**2)
-print(f"Distance between {firstcoordinates} and {secondcoordinates} is{d:.2f}.")
+print(f"Distance between {firstcoordinates} and {secondcoordinates} is {d:.2f}.")
