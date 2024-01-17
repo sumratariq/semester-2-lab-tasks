@@ -1,0 +1,15 @@
+firstcoordinates=input("Enter your first coordinates.")
+comma=firstcoordinates.find(",")
+x1=firstcoordinates[1:comma]
+y1=firstcoordinates[comma+1:-1]
+secondcoordinates=input("Enter your first coordinates.")
+comma=secondcoordinates.find(",")
+x2=secondcoordinates[1:comma]
+y2=secondcoordinates[comma+1:-1]
+x_1=int(x1)
+x_2=int(x2)
+y_1=int(y1)
+y_2=int(y2)
+import math
+d=math.sqrt((x_2-x_1)**2+(y_2-y_1)**2)
+print(f"Distance between {firstcoordinates} and {secondcoordinates} is{d:.2f}.")
