@@ -1,0 +1,38 @@
+equation=input("Enter the quadratic equation.")
+quadratic=equation.rfind("x^2")
+linear=equation.rfind("x")
+x_2=equation[0:quadratic]
+x_1=equation[quadratic+3:linear]
+constant=equation[linear+1::]
+x_2=int(x_2)
+x_1=int(x_1)
+constant=int(constant)
+disc=x_1**2-4*x_2*constant
+if disc==0:
+    print("Roots are real,equal and rational.")
+    disc = disc ** (1 / 2)
+    disc = int(disc)
+    root1 = (x_1 + disc) / (2 * x_2)
+    root2 = (x_1 - disc) / (2 * x_2)
+    print(root1,root2)
+    exit()
+elif disc>0:
+    print("Roots are real,distinct and irrational.")
+elif disc<0:
+    print("Roots are imaginary.")
+    x_1 = -x_1
+    disc = int(disc)
+    import cmath
+    disc = disc ** (1 / 2)
+    root1 = (x_1 + disc) / (2 * x_2)
+    root2 = (x_1 - disc) / (2 * x_2)
+    print(f"The real parts of the roots are\n{root1.real:.2f},{root2.real:.2f}\n And the imaginary part of roos are\n{root1.imag:.2f},{root2.imag:.2f}")
+    exit()
+x_1=-x_1
+disc=int(disc)
+disc=disc**(1/2)
+root1=(x_1+disc)/(2*x_2)
+root2=(x_1-disc)/(2*x_2)
+root1=int(root1)
+root2=int(root2)
+print(root1,root2)
