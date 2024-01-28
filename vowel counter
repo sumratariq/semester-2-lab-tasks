@@ -1,0 +1,10 @@
+userinput=input("Enter your desired sentence.")
+vowels="a","e","i","o","u"
+sum=0
+for i in userinput:
+    if i in vowels:
+        print(f"{i} is the vowel present in given sentence.")
+for letter in vowels:
+    counting=userinput.count(letter)
+    sum+=counting
+print(f"there are total {sum}vowels present in the given sentence.")
