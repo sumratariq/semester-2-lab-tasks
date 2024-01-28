@@ -1,0 +1,10 @@
+userinput=input("Enter your binary code.")
+userinput=userinput[::-1]
+sum=0
+x=0
+for i in userinput:
+    i=int(i)
+    decimal=i*(2**x)
+    sum+=decimal
+    x=x+1
+print(sum)
