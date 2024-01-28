@@ -1,0 +1,13 @@
+lower_range=int(input("Enter the lower number of the range."))
+upper_range=int(input("Enter the maximum number of the range."))
+sum=0
+for num in range(lower_range,upper_range+1):
+    if num>1:
+        for i in range(2,num):
+            if (num%i)==0:
+                break
+        else:
+            print(num)
+            sum+=num
+print(f"The sum of all prime numbers is {sum}")
+
