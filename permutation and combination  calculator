@@ -1,0 +1,21 @@
+def factorial(n):
+    ''' This function calculates factorial of a number.'''
+    fact=1
+    for i in range(fact,n+1):
+        fact=fact*i
+    return fact
+a=int(input("Enter value of n."))
+b=int(input("Enter value of r."))
+if a<b:
+    print("r must be smaller than n.")
+else:
+    d=factorial(a)
+    c=a-b
+    factc=factorial(c)
+    permmutation=d/factc
+    permmutation=int(permmutation)
+    print(f"nPr = {permmutation}")
+    e=factorial(b)
+    combination=d/(e*factc)
+    combination=int(combination)
+    print(f"nCr = {combination}")
