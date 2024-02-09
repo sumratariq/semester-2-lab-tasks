@@ -1,0 +1,8 @@
+user_input=input("Enter a sentence or word.")
+string=lambda user_input:user_input.upper()
+print(string(user_input))
+def invert(string):
+    reverse=string(user_input)
+    reverse_final=reverse[::-1]
+    return reverse_final
+print(invert(user_input))
