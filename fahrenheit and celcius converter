@@ -1,0 +1,16 @@
+temperatureinput=input("In which scale you want to enter the temperature? F/C ")
+inputtemperature=int(input("Enter your temperature."))
+if temperatureinput=="F":
+    def temp(temperature):
+        '''This function takes input in fahrenheit and convert it into celcius degree.'''
+        temperature=5/9 * (inputtemperature-32)
+        return temperature
+    output=int(temp(inputtemperature))
+    print(f"{inputtemperature} fahrenheit is equal to {output} celcius.")
+elif temperatureinput=="C":
+    def temp(temperature):
+        '''This function takes input in degree celcius and convert it into fahrenheit.'''
+        temperature=(9/5 * inputtemperature) + 32
+        return temperature
+    output=int(temp(inputtemperature))
+    print(f"{inputtemperature} celcius is equal to {output} fahrenheit.")
