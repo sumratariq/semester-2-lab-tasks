@@ -1,0 +1,17 @@
+totalsubjects=int(input("How many subjects did you studied this semester?"))
+totalgradepoints=0
+total=0
+for i in range(totalsubjects):
+    subject=input("Enter the name of the subject.")
+    credithours=int(input("Enter credit hours of the subject."))
+    gradepoint=float(input("Enter the required grade point in the subject."))
+    totalgradepoint=int(credithours*gradepoint)
+    print(f"Total grade points obtained are {totalgradepoint}")
+    totalgradepoints+=totalgradepoint
+    total+=credithours
+def gpa(subjects):
+    '''This function calculates the average gpa of a semester'''
+    averagegpa=totalgradepoints/total
+    return averagegpa
+avggpa=int(gpa(gradepoint))
+print(avggpa)
