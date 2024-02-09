@@ -1,0 +1,13 @@
+a=int(input("Enter first number."))
+b=int(input("Enter second number."))
+n=int(input("Upto which extent you want the table of the greater number?"))
+greater=lambda a,b:max(a,b)
+# print(greater(a,b))
+def table(num):
+    ''' This function takes greater number from the lambda function and gives us its table upto a specific range. '''
+    for i in range(1,n+1):
+        multiple= int(num*i)
+    return multiple
+specified_table=table(greater(a,b))
+print(f"{greater(a,b)} * {n} = {specified_table}")
+print(table.__doc__)
