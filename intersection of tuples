@@ -1,0 +1,15 @@
+tuple1=input("Enter numbers separated by comma. ").split(",")
+tuple2=input("Enter numbers separated by comma. ").split(",")
+tuple1=tuple(tuple1)
+tuple2=tuple(tuple2)
+def intersection(tuples1,tuples2):
+    ''' This function takes two tuples as an argument and returns their intersection.'''
+    # outputlist = []
+    maintuple=set(tuples1)&set(tuples2)
+    return maintuple
+    # for i in range(tuples1[::]):
+    #     if tuples1[i] in tuples2:
+    #         outputlist.append(i)
+    # return outputlist
+outputlistmain=intersection(tuple1,tuple2)
+print(outputlistmain)
