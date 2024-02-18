@@ -1,0 +1,7 @@
+l=input("Give the elements of the list splitted by comma.").split(",")
+l=list(set(l))
+newlist=[]
+newlist.append(l)
+l.sort()
+print(newlist)
+print(newlist[0][-2])
