@@ -1,0 +1,11 @@
+l=input("Give the elements of the list splitted by comma.").split(",")
+newlist=[]
+newlist.append(l)
+outputlist=[]
+for i in range(len(l)):
+    list=l.count(l[i])
+    if list!=1:
+        pass
+    else:
+        outputlist.append(l[i])
+print(outputlist)
