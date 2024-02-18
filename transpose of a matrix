@@ -1,0 +1,11 @@
+matrix = []
+for i in range(3):
+    userinput = input("Enter three numbers separated by space").split(",")
+    matrix.append(userinput)
+outputmatrix1=matrix[1][0]
+outputmatrix1 = (matrix[0][0], matrix[1][0], matrix[2][0])
+outputmatrix2=(matrix[0][1], matrix[1][1], matrix[2][1])
+outputmatrix3=(matrix[0][2], matrix[1][2], matrix[2][2])
+print(outputmatrix1)
+print(outputmatrix2)
+print(outputmatrix3)
