@@ -1,0 +1,19 @@
+Engrprogram={
+    "A":"Engrprograms",
+    "B":"Engrprograms",
+    "C":"Engrprograms",
+    "D":"Engrprograms"
+}
+nonEngrprogram={
+    "E":"nonEngrprograms",
+    "B":"nonEngrprograms",
+    "C":"nonEngrprograms",
+    "F":"nonEngrprograms"
+}
+Engrprogram=set(Engrprogram)
+nonEngrprogram=set(nonEngrprogram)
+bothprograms=Engrprogram.intersection(nonEngrprogram)
+print(f"{bothprograms} have applied in both engineering and non engineering programs.")
+total=Engrprogram.union(nonEngrprogram)
+totalstudents=len(total)
+print(f"{totalstudents} students have totally appeared in uet for admissions")
