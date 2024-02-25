@@ -1,0 +1,32 @@
+contactdict={"Ana":111,"Lisa":222,"Zara":333,"Meruem":444,"Maddy":1111}
+operation=input("""Enter which operation you want to perform on the contact book? 
+(search name) for searching a contact number by name
+(display names) for showing all names saved in the contact book 
+(display number) for showing all numbers in the contact book
+(delete) for deleting a number from phone book
+(update) for adding a number from the phone book
+(clear) for clearing the whole phone book.""")
+if operation=="update":
+    nameinput=input("Enter the name of the contact.")
+    numberinput=input("Enter the number of the contact.")
+    contactdict.update({nameinput:numberinput})
+    print(contactdict)
+elif operation=="search name":
+    searchinput=input("Enter the name whose contact you want to search.")
+    value=contactdict.get(searchinput)
+    print(value)
+elif operation=="display names":
+    allnames=contactdict.keys()
+    print(allnames)
+elif operation=="display number":
+    allnumbers=contactdict.values()
+    print(allnumbers)
+elif operation=="delete":
+    deletecontact=input("Enter the name you want to delete.")
+    deleted=contactdict.pop(deletecontact)
+    print(contactdict)
+elif operation=="clear":
+    contactdict.clear()
+    print(contactdict)
+else:
+    print("Choose an appropriate function")
