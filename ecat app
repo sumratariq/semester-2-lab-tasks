@@ -1,0 +1,94 @@
+def question(ques,ans):
+    if ans==ques[-3]:
+        totalmarks.append(4)
+        correctanswers.append(1)
+    elif ans==ques[-1]:
+        pass
+    elif ans==ques[-2]:
+        skipped.append(1)
+    elif ans!=ques[-3]:
+        totalmarks.append(-1)
+        wronganswers.append(1)
+    return(totalmarks)
+username=input("Enter your name.")
+response=input(f"Are you ready for your ecat exam {username}. Y/N ")
+if response=="Y":
+    totalmarks=[]
+    skipped=[]
+    correctanswers=[]
+    wronganswers=[]
+    question1=["a","b","c","d","b","e","f"]
+    answer=(print("""The formula of work done is:
+a)ma       b)fd
+c)vd       d)ba
+e)skip     f)next"""))
+    answer1=input("Enter your option ")
+    answermain=question(question1,answer1)
+    question2 = ["a", "b", "c", "d", "c", "e", "f"]
+    answer2 = (print("""Which branch deals with matter and energy?
+a)biology       b)chemistry
+c)physics       d)maths
+e)skip          f)next"""))
+    answer2 = input("Enter your option")
+    answermain = question(question2, answer2)
+    question3=["a", "b", "c", "d", "d", "e", "f"]
+    answer3 = (print("""Which element shows diamegnatic behaviour.
+a)sodium                   b)magnesium
+c)ferro-nickel alloy       d)oxygen
+e)skip                     f)next"""))
+    answer3 = input("Enter your option")
+    answermain = question(question3, answer3)
+    question4 = ["a", "b", "c", "d", "a", "e", "f"]
+    answer4 = (print("""Which gland is the master gland in our body?
+a)pituitary gland      b)thyroid gland
+c)adrenal glands       d)bulbouretheral gland
+e)skip                 f)next"""))
+    answer4 = input("Enter your option")
+    answermain = question(question4, answer4)
+    question5 = ["a", "b", "c", "d", "c", "e", "f"]
+    answer5 = (print("""Which hydrocarbon gives the lucas test reapidly?
+a)primary alkenes     b)secondary alkenes
+c)tertiary alkenes    d)none of these
+e)skip                f)next"""))
+    answer5 = input("Enter your option")
+    answermain = question(question5, answer5)
+    question6 = ["a", "b", "c", "d", "b", "e", "f"]
+    answer6 = (print("""The loation of adrenal glands is?
+a)hypothalamus     b)kidney
+c)lower abdomen    d)phyranx
+e)skip             f)next"""))
+    answer6 = input("Enter your option")
+    answermain = question(question6, answer6)
+    question7 = ["a", "b", "c", "d", "b", "e", "f"]
+    answer7 = (print("""Visible spectrum of hydrogen series lies in?
+a)lymann     b)balmer
+c)paschen    d)pfund
+e)skip       f)next"""))
+    answer7 = input("Enter your option")
+    answermain = question(question7, answer7)
+    question8 = ["a", "b", "c", "d", "c", "e", "f"]
+    answer8 = (print("""The method of sexual reproduction is?
+a)fission          b)budding
+c)fertilization    d)fragmentation
+e)skip             f)next"""))
+    answer8 = input("Enter your option")
+    answermain = question(question8, answer8)
+    question9 = ["a", "b", "c", "d", "b", "e", "f"]
+    answer9 = (print("""The fruits formed in result of parthenocarpy?
+a)apple     b)banana
+c)mango     d)apricot
+e)skip      f)next"""))
+    answer9 = input("Enter your option")
+    answermain = question(question9, answer9)
+    question10 = ["a", "b", "c", "d", "a", "e", "f"]
+    answer10 = (print("""The fungi is posonous?
+a)Death cap     b)Shaggy cap
+c)the prince    d)wood ear
+e)skip          f)next"""))
+    answer10 = input("Enter your option")
+    answermain = question(question10, answer10)
+    sumtotal=sum(totalmarks)
+    print(f"Your total marks are {sumtotal}")
+    print(f"The amount of correct answers were {len(correctanswers)}")
+    print(f"The amount of wrong answers were {len(wronganswers)}")
+    print(f"The amount of skipped questions is {len(skipped)}")
