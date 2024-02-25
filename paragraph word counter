@@ -1,0 +1,17 @@
+# task 3
+para=input("Enter a paragraph").split(" ")
+paradict={}
+repeated={}
+once={}
+i=0
+for x in para:
+    y=para.count(x)
+    if y!=1:
+        repeated.update({x:y})
+    elif y==1:
+        once.update({x:1})
+    paradict.update({x:i})
+    i=i+1
+print(len(para))
+print(repeated)
+print(once)
