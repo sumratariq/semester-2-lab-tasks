@@ -1,0 +1,12 @@
+list = ["a", "b", 1, [2, "a"], (1, 2, 3), {"a": 1, "b": 2, "c": 3}]
+newlist = []
+def check(element):
+    ''' this function takes a list and separates string data type from other data types.'''
+    if type(element) == str:
+        newlist.append(element)
+        return
+    else:
+        pass
+for i in list[::]:
+    check(i)
+print(newlist)
