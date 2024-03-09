@@ -1,0 +1,13 @@
+import random
+
+list = []
+for i in range(10):
+    list.append(random.randint(0, 1000))
+print(list)
+def addon(x:list):
+    ''' This function takes 10 random numbers and add them using recursion.'''
+    if len(x) == 0:
+        return 0
+    else:
+        return x[0]+addon(x[1:])
+print(addon(list))
