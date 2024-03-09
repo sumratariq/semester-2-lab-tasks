@@ -1,0 +1,9 @@
+def power(x,y):
+    if y==0:
+        return 1
+    else:
+        return x*power(x,y-1)
+number=int(input("Enter a number."))
+powernumber=int(input("Enter the power of the number."))
+ans=power(number,powernumber)
+print(ans)
