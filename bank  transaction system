@@ -1,0 +1,73 @@
+dict={"1":[1,5760,"sam",3],"2":[1,5760,"sam",3]}
+operation=input("""What do you want to do?
+create account c
+deposit money d
+withdrawl money w
+transfer money t""")
+if operation=="c":
+    create={}
+    credentials=[]
+    id=input("enter your account id")
+    accno=int(input("Enter account number."))
+    credentials.append(accno)
+    balance=int(input("Enter your account balance."))
+    credentials.append(balance)
+    name=input("Enter your name.")
+    credentials.append(name)
+    cnic=int(input("Enter your cnic"))
+    credentials.append(cnic)
+    create.update({id:credentials})
+    dict.update({id: credentials})
+elif operation=="d":
+    dep=int(input("How much money you want to deposit?"))
+    accdep=input("Enter the accound id you want to deposit money to")
+    list=dict.get(accdep)
+    updatedamount=list[1]+dep
+    print(f"Your new balance is{updatedamount}")
+elif operation=="w":
+    withdraw=int(input("How much money you want to withdraw?"))
+    accdep=input("Enter the account id you want to withdraw money from?")
+    list = dict.get(accdep)
+    updatedamount=list[1]-withdraw
+    print(f"Your new balance is {updatedamount}")
+    onenotes=withdraw%5000
+    onenote=withdraw//5000
+    print(f"you get {onenote} note of 5000")
+    twonotes=onenotes%1000
+    twonote=onenotes//1000
+    print(f"You get {twonote} notes of 1000")
+    threenotes=twonotes%500
+    threenote=twonotes//500
+    print(f"You get {threenote} notes of 500.")
+    fournotes=threenotes%100
+    fournote=threenotes//100
+    print(f"You get {fournote} notes of 100")
+    fivenotes=fournotes%50
+    fivenote=fournotes//50
+    print(f"You get {fivenote} notes of 50.")
+    sixnotes=fivenotes%20
+    sixnote=fivenotes//20
+    print(f"you get {sixnote} notes of 20.")
+    sevennotes=sixnotes%10
+    sevennote=sixnotes//10
+    print(f"you get {sevennote} notes of 10")
+    onecoins=sevennotes%5
+    onecoin=sevennotes//5
+    print(f"you get {onecoin} coins of 5")
+    twocoins=onecoins%2
+    twocoin=onecoins//2
+    print(f"you get {twocoin} coins of 2")
+    threecoins=twocoins%1
+    threecoin=threecoins//1
+    print(f"you get {threecoin} coins of 1")
+elif operation=="t":
+    fromid=input("Enter id from which you want to transfer")
+    amount=int(input("how much money you want to transfer?"))
+    fromi=dict.get(fromid)
+    amountl=fromi[1]-amount
+    print(f"{amountl} is deducted from {fromid}")
+    toid=input("Enter id to which you want to transfer")
+    toi=dict.get(toid)
+    amounta=toi[1]+amount
+    print(f"{amounta} is new updated amount of {toid} account number")
+print(dict.items())
