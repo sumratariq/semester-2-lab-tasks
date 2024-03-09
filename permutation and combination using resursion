@@ -1,0 +1,25 @@
+def fact(n):
+    ''' this function gives factorial of a number using recursion.'''
+    if n<=1:
+        return n
+    else:
+        n=fact(n-1)*n
+        return n
+ninput=int(input("Enter value of n"))
+rinput=int(input("Enter value of r"))
+if rinput<ninput:
+    nfact=fact(ninput)
+    rfact=fact(rinput)
+    n_r=ninput-rinput
+    n_rfact=fact(n_r)
+    combination=int(nfact/(rfact*n_rfact))
+    permutation=int(nfact/n_rfact)
+    print(f"nCr = {combination}")
+    print(f"nPr = {permutation}")
+else:
+    print("r needs to be smaller than n")
+
+
+
+
+
