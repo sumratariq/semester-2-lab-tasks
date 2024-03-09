@@ -1,0 +1,8 @@
+def inverted(txt):
+    ''' This function takes a string as a parameter and reverse it using recursion'''
+    if txt=="":
+        return txt
+    else:
+        return inverted(txt[1:])+txt[0]
+striinginp=input("Enter any word.")
+print(inverted(striinginp))
