@@ -1,0 +1,71 @@
+import string
+password=123
+import random
+def word(ranum):
+    ranum[::-1]
+    # ranum=random.choices(ranum)
+    dict={"a":"z","b":"y","c":"x","d":"w",
+          "e":"v","f":"u","g":"t","h":"s",
+          "i":"r","j":"q","k":"p","l":"o",
+          "m":"n","n":"m","o":"l","p":"k",
+          "q":"j","r":"i","s":"h","t":"g",
+          "u":"f","v":"e","w":"d","x":"c",
+          "y":"b","z":"a"}
+    list=["a","b","c","d","e","f","g","h",
+          "i","j","k","l","m","n","o","p",
+          "q","r","s","t","u","v","w","x",
+          "y","z"]
+    randomletters1=random.choices(list,k=3)
+    randomletters2 = random.choices(list, k=3)
+    randomletters1=map(str,randomletters1)
+    randomletters1="".join(randomletters1)
+    randomletters2 = map(str,randomletters2)
+    randomletters2="".join(randomletters2)
+    randomword=[]
+    randomword.append("".join(randomletters1))
+    for x in ranum:
+        encryptedname=dict.get(x)
+        randomword.append(encryptedname)
+    randomword.append(randomletters2)
+    randomword="".join(randomword)
+    # print(randomword)
+    return randomword
+def decryption(words):
+    words=words[3:-3]
+    dict={"a":"z","b":"y","c":"x","d":"w",
+          "e":"v","f":"u","g":"t","h":"s",
+          "i":"r","j":"q","k":"p","l":"o",
+          "m":"n","n":"m","o":"l","p":"k",
+          "q":"j","r":"i","s":"h","t":"g",
+          "u":"f","v":"e","w":"d","x":"c",
+          "y":"b","z":"a"}
+    finalanswer=[]
+    for x in words:
+        y=dict.get(x)
+        y="".join(y)
+        finalanswer.append(y)
+    # print(words)
+    finalanswer = "".join(finalanswer)
+    return finalanswer
+x=input("Enter a word").split(" ")
+j=0
+output=[]
+for i in range(len(x)):
+    output.append(word(x[j]))
+    j=j+1
+print(output)
+passwordinput=int(input("Enter your password."))
+if passwordinput==password:
+    a=0
+    b=[]
+    # b=str(b)
+    for i in range(len(output)):
+        b.append(decryption(output[a]))
+        a=a+1
+    # b=str(b)
+    # b="".join(b)
+    print(b)
+else:
+    print("Your password is incorrect")
+
+
