@@ -1,0 +1,44 @@
+dict={}
+name=input("Enter your name.")
+namelist=[]
+for r in name:
+    try:
+        r=int(r)
+        print("Put a string only")
+        break
+    except Exception as msg:
+        namelist.append(r)
+listfinal="".join(namelist)
+dict.update({"Name":listfinal})
+address=input("Enter your address.")
+if len(address)<3:
+    raise ValueError("Enter address of appropriate value.")
+else:
+    dict.update({"Address":address})
+try:
+    contact=int(input("Enter your contact number"))
+    if not type(contact) is int:
+        raise ValueError("Enter integers only")
+    else:
+        dict.update({"Contact":contact})
+except ValueError as msg:
+    print(msg)
+age=int(input("Enter your age."))
+if age<=0 or age>=150:
+    raise ValueError("Age must be between 0 or 150")
+else:
+    dict.update({"Age":age})
+gender=input("Enter your gender m for male, f for female.")
+if gender!="m" and gender!="f":
+    raise TypeError("Gender must be male or female")
+else:
+    dict.update({"Gender":gender})
+print(dict)
+
+
+
+
+
+
+
+
