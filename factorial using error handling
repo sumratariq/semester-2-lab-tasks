@@ -1,0 +1,14 @@
+try:
+    def fact(n):
+        if n==0:
+            return 1
+        else:
+            return n*fact(n-1)
+    userinput=input("Enter any number for which you want to calculate factorial.")
+    assert userinput!=type(str) ,"invalid syntax"
+    userinput = int(userinput)
+    assert userinput>=0, "Invalid syntax"
+    result=fact(userinput)
+    print(result)
+except Exception as msg:
+    print(msg)
