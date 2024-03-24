@@ -1,0 +1,16 @@
+try:
+    matrix=[]
+    for i in range(2):
+        userinput=input("Enter elements of the matrix.").split(" ")
+        matrix.append(userinput)
+    print(matrix)
+    outputmatrix=[]
+    determinant=int(matrix[0][0])*int(matrix[1][1])-int(matrix[0][1])*int(matrix[1][0])
+    x=int(matrix[1][1])//determinant,-(int(matrix[0][1])//determinant)
+    y=-(int(matrix[1][0])//determinant),(int(matrix[0][0])//determinant)
+    outputmatrix.append(x)
+    outputmatrix.append(y)
+    print(outputmatrix)
+    print(determinant)
+except ZeroDivisionError as msg:
+    print(msg)
