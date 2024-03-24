@@ -1,0 +1,15 @@
+def hex(n):
+    try:
+        n=int(n)
+        n="The hexadecimal value of the number is %x"%n
+        return n
+    except Exception as msg:
+        print("Type an integer")
+    finally:
+        print("UDF call successfully")
+userinput=input("Enter a decimal number.")
+try:
+    if type(userinput)!=int:
+        raise TypeError("cv")
+except:
+    print(hex(userinput))
