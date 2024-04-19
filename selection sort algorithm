@@ -1,0 +1,11 @@
+list=[100,99,87,69,5]
+k=0
+for i in range(0,len(list)):
+    for j in range(i,len(list)):
+        if list[j]<list[i]:
+            temp=list[i]
+            list[i]=list[j]
+            list[j]=temp
+            k=k+1
+            print(f"Total no of swaps : {k}")
+        print(list)
