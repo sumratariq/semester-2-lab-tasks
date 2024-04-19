@@ -1,0 +1,36 @@
+list = [1, 7,67, 87, 99,100, 500]
+number=500
+searches=0
+for i in range(len(list)):
+    l=0
+    r=len(list)
+    mid=(l+r)//2
+    midindex=list[mid]
+    searches=searches+1
+    if number == midindex:
+        searches = searches + 1
+        print(f"No of searches done is {searches}")
+        print(f"This is number {mid} index  = {midindex}")
+        break
+    else:
+        while number!=midindex:
+            searches=searches+1
+            if number>midindex:
+                l=mid
+                r=len(list)
+                mid = (l + r) // 2
+                midindex = list[mid]
+                if number == midindex:
+                    print(f"No of searches done is {searches}")
+                    print(f"This is number {mid} index  = {midindex}")
+                    break
+            elif number<midindex:
+                l=0
+                r=mid
+                mid = (l + r) // 2
+                midindex = list[mid]
+                if number == midindex:
+                    print(f"No of searches done is {searches}")
+                    print(f"This is number {mid} index  = {midindex}")
+                    break
+        break
