@@ -1,0 +1,13 @@
+list = [100, 99, 1, 7, 87, 69, 500]
+passes=0
+for i in range(1, len(list)):
+    j = i - 1
+    temp= list[i]
+    while list[j] >temp and j >= 0:
+        list[j + 1] = list[j]
+        j -= 1
+        list[j + 1] =temp
+        passes=passes+1
+        print(f"The no of total swaps are : {passes}")
+        print(list)
+        #the code isnt working when we use list[i] instead of k
