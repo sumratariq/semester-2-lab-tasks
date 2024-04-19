@@ -1,0 +1,5 @@
+list = [100, 99, 1, 7, 87, 69, 500]
+for i in range(len(list)):
+    if list[i]==7:
+        print("Element found")
+        print(f"At the index of {i+1}")
