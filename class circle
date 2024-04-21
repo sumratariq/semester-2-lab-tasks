@@ -1,0 +1,16 @@
+class Cirle:
+    def __init__(self,radius):
+        self.radius=radius
+    def area(self):
+        finalarea=3.141592653589793238462643383279502884197*self.radius**2
+        return finalarea
+class Cylinder(Cirle):
+    def __init__(self,radius,height):
+        self.height=height
+        super().__init__(radius)
+    def volume(self):
+        area1=super().area()
+        finalvolume=area1*self.height
+        return finalvolume
+height=Cylinder(2,2)
+print("The area of circle is", round(height.area(),2), "and it's volume is", round(height.volume(),2))
