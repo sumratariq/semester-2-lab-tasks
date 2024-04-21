@@ -1,0 +1,21 @@
+class Calculator:
+    def __init__(self,num1,num2):
+        self.num1=num1
+        self.num2=num2
+    def add(self):
+        addition=self.num1+self.num2
+        print(f"The sum of the numbers is {addition}")
+    def sub(self):
+        subtraction=self.num1-self.num2
+        print(f"The difference of the numbers is {subtraction}")
+    def mul(self):
+        multiplication=self.num1*self.num2
+        print(f"The product of the numbers is {multiplication}")
+    def div(self):
+        division=self.num1//self.num2
+        print(f"The division of the numbers is {division}")
+addition=Calculator(1,2)
+addition.add()
+addition.sub()
+addition.mul()
+addition.div()
