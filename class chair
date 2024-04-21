@@ -1,0 +1,16 @@
+class Chair:
+    def __init__(self, color, height, material):
+        self.color = color
+        self.height = height
+        self.material = material
+    def disp(self):
+        print(f"The color of chair is {self.color} is {self.height} inches long and is made of {self.material}")
+chair1=Chair("Blue",16,"Maple wood")
+chair2=Chair("Red",17,"Deodar wood")
+chair3=Chair("Black",18,"Oak wood")
+print("Chair1: ")
+chair1.disp()
+print("Chair2: ")
+chair2.disp()
+print("Chair3:")
+chair3.disp()
