@@ -1,0 +1,20 @@
+class Students:
+    name = ""
+    age =""
+    grade = ""
+    def spec(self,name,age,grade):
+        self.name = name
+        self.age = age
+        self.grade = grade
+        print(f"The name of the student is {self.name} with age {self.age} and grade {self.grade}")
+        print(self.name)
+student1=Students()
+student1.name=input("Enter the name of the student.")
+student1.age=int(input("Enter the age of the student."))
+student1.grade=input("Enter the grade of the student.")
+student1.spec(student1.name,student1.age,student1.grade)
+student2=Students()
+student2.name=input("Enter the name of the student.")
+student2.age=int(input("Enter the age of the student."))
+student2.grade=input("Enter the grade of the student.")
+student2.spec(student2.name,student2.age,student2.grade)
